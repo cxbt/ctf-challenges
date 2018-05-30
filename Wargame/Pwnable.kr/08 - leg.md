@@ -133,3 +133,76 @@ Dump of assembler code for function key3:
 End of assembler dump.
 (gdb)
 ```
+
+## 몇가지 ARM에 관한 상식
+
+- `int function(a, b, c)`로 분기할 때, `r1`, `r2`, `r3` 순으로 각각 `a`, `b`, `c` 데이터를 넣게 된다.
+- ARM은 `fetch-decode-execute`라는 3단계 파이프라인을 거치기 때문에, 실제 명령어 실행은 2라인 뒤에서 된다.
+- 함수의 `Return`값은 `r0` 레지스터에 저장되게 된다.
+
+## key1을 보자
+
+```c
+Dump of assembler code for function key1:
+   0x00008cd4 <+0>:     push    {r11}           ; (str r11, [sp, #-4]!)
+   0x00008cd8 <+4>:     add     r11, sp, #0
+->   0x00008cdc <+8>:     mov     r3, pc
+->   0x00008ce0 <+12>:    mov     r0, r3
+->   0x00008ce4 <+16>:    sub     sp, r11, #0
+   0x00008ce8 <+20>:    pop     {r11}           ; (ldr r11, [sp], #4)
+   0x00008cec <+24>:    bx      lr
+```
+
+함수의 리턴값은 `r0`에 저장된다고 했다. 우리가 볼건 `r0`값의 변화 뿐이다ㅋ `0x8cdc`에서 `pc`값을 `r3`에 넣고, `r3`에 넣은 값을 다시 `r0`에 넣는걸 볼 수 있는데, 파이프라인을 기억하자. 명령어는 2라인 뒤에서 실행된다. 2라인 뒤인 `0x8ce4`에서 `mov r3, pc`가 실행되게 되면서 `key1()`의 리턴값은 `0x8ce4`가 된다.
+
+## key2를 보자 흐흐
+
+```c
+Dump of assembler code for function key2:
+   0x00008cf0 <+0>:     push    {r11}           ; (str r11, [sp, #-4]!)
+   0x00008cf4 <+4>:     add     r11, sp, #0
+   0x00008cf8 <+8>:     push    {r6}            ; (str r6, [sp, #-4]!)
+   0x00008cfc <+12>:    add     r6, pc, #1
+   0x00008d00 <+16>:    bx      r6
+->   0x00008d04 <+20>:    mov     r3, pc
+->   0x00008d06 <+22>:    adds    r3, #4
+   0x00008d08 <+24>:    push    {r3}
+   0x00008d0a <+26>:    pop     {pc}
+   0x00008d0c <+28>:    pop     {r6}            ; (ldr r6, [sp], #4)
+->   0x00008d10 <+32>:    mov     r0, r3
+   0x00008d14 <+36>:    sub     sp, r11, #0
+   0x00008d18 <+40>:    pop     {r11}           ; (ldr r11, [sp], #4)
+   0x00008d1c <+44>:    bx      lr
+End of assembler dump.
+```
+
+`key1`에서 한 것 처럼 생각하면, `0x8d04`의 `mov r3, pc`는 `0x8d08`에 갈때 실행 되므로, `key2()`의 리턴값은 거기에 4를 더한 (`0x8d06` 참고) `0x8d0c`가 된다.
+
+## key3를 보자 헤헤
+
+```c
+Dump of assembler code for function key3:
+   0x00008d20 <+0>:     push    {r11}           ; (str r11, [sp, #-4]!)
+   0x00008d24 <+4>:     add     r11, sp, #0
+->   0x00008d28 <+8>:     mov     r3, lr
+->   0x00008d2c <+12>:    mov     r0, r3
+   0x00008d30 <+16>:    sub     sp, r11, #0
+   0x00008d34 <+20>:    pop     {r11}           ; (ldr r11, [sp], #4)
+   0x00008d38 <+24>:    bx      lr
+```
+
+`key3`으로 분기할때 `branch link`가 생성되었다. 그말인즉슨 돌아갈 리턴 어드레스가 `lr`에 저장되어 있다는 것이다. `key3`으로 분기하는 `bl` 명령어 다음 주소인 `0x8d80`가 들어있다. 그래서 `key3()` 리턴값은 `0x8d80`이 된다ㅋ
+
+## 그래서
+
+`0x8ce4` + `0x8d0c` + `0x8d80` = `0x1a770` = 108400
+
+아하
+
+```text
+/ $ ./leg
+Daddy has very strong arm! :
+108400
+Congratz!
+My daddy has a lot of ARMv5te muscle!
+```
