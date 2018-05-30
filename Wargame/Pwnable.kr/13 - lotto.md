@@ -270,3 +270,32 @@ Dump of assembler code for function play:
    0x00000000004009b5 <+433>:   leave
    0x00000000004009b6 <+434>:   ret
 ```
+
+## 생각해보니
+
+```c
+// calculate lotto score
+int match = 0, j = 0;
+for(i=0; i<6; i++){
+        for(j=0; j<6; j++){
+                if(lotto[i] == submit[j]){
+                        match++;
+                }
+        }
+}
+```
+
+문제가 없을것 같은 위 루틴을 잘 보자. 우리가 원하는 것은 `match`가 6이 되는 것이다. 위 반복문은 입력값과 `/dev/urandom`에서 가져온 랜덤값을 각각의 바이트 모두 비교, 즉 총 36번 반복한다. 여기서 문제가 되는 것은 **중복된 입력값**을 처리하지 않는다는 것이다. 입력값으로 `6`을 6번 줬을때, 로또 번호에 `6`이 하나라도 있다면 그게 중복처리가 되지 않기 때문에 `match`가 6이 되게 되는 것이다.
+
+그래서 여러번 하나의 값만 줬다. 한 20번인가 노가다를 하다보니 나왔다ㅋ
+
+```text
+- Select Menu -
+1. Play Lotto
+2. Help
+3. Exit
+1
+Submit your 6 lotto bytes :
+Lotto Start!
+sorry mom... I FORGOT to check duplicate numbers... :(
+```
