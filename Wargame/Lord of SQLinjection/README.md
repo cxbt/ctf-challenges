@@ -6,4 +6,4 @@ SQL 인젝션의 마스터가 되자! 웹알못이라서 writeup에 잘못된 �
 
 2018.05.29 기준
 
-![상태](screenshot/status.PNG)
+![상태](https://raw.githubusercontent.com/CXBT/Writeup/master/Wargame/Lord%20of%20SQLinjection/screenshot/status.png)
