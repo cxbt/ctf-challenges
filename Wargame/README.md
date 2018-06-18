@@ -16,6 +16,7 @@
   - [Reversing.kr](#reversingkr)
   - [Cresendo Forensics](#cresendo-forensics)
   - [XCZ.KR](#xczkr)
+  - [exploit-exercises](#exploit-exercises)
 
 ---
 
@@ -76,3 +77,7 @@ BOB 형누나들이 개발한 몇안되는 포렌식 문제 사이트 였는데 
 포렌식 문제 풀려고 돌아다니다가 찾은 사이트
 
 포렌식 문제가 참... 수수께끼 같다
+
+### [exploit-exercises](https://exploit-exercises.com)
+
+음... 어쩌다 이걸 찾게 된거지...? 아무튼 재밌어 보여서 추가했다!
