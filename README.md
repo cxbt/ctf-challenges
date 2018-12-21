@@ -2,9 +2,9 @@
 
 Hacking CTFs and Wargame writeup written by CXBT.
 
-[Go To CTF]()
+[Go To CTF](https://github.com/cxbt/Writeup/tree/master/CTF)
 
-[Go To Wargame]()
+[Go To Wargame](https://github.com/cxbt/Writeup/tree/master/Wargame)
 
 ## Updates
 
