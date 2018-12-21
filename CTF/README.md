@@ -11,8 +11,8 @@
 
 - [IceCTF](https://icec.tf/)
 - ASIS CTF Quals 2017
-- [HSCTF](hsctf.com)
+- [HSCTF](https://hsctf.com)
 
 ### 2018
 
-- [X-MAS CTF 2018](xmas-ctf.cf) with @phillyai
+- [X-MAS CTF 2018](https://xmas-ctf.cf) with @phillyai
