@@ -63,7 +63,7 @@
 
 3번째, 4번째 문자는 `5y`가 되야한다.
 
-```
+```assembly
 004010CF   |. 53             PUSH EBX
 004010D0   |. 56             PUSH ESI
 004010D1   |. BE 6C604000    MOV ESI,Easy_Cra.0040606C                       ;  ASCII "R3versing"
@@ -96,7 +96,7 @@
 
 5번째 문자부터 끝날때 까지 반복하면서 `R3versing`과 비교를 한다.
 
-```
+```assembly
 0040110D   |. 807C24 04 45   CMP BYTE PTR SS:[ESP+4],45
 00401112   |. 75 21          JNZ SHORT <Easy_Cra.Fail Point>
 ```
