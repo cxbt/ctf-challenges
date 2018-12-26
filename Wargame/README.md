@@ -14,7 +14,7 @@
   
 - :heart: [SuNiNaTas](https://github.com/cxbt/Writeup/tree/master/Wargame/Suninatas), Link : http://suninatas.com/
   
-- :heart: [Reversing.kr](), Link : http://reversing.kr/
+- :heart: [Reversing.kr](https://github.com/cxbt/Writeup/tree/master/Wargame/Reversing.kr), Link : http://reversing.kr/
   
 - :heart: [pwnable.kr](https://github.com/cxbt/Writeup/tree/master/Wargame/Pwnable.kr), Link : http://pwnable.kr
   
