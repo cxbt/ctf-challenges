@@ -2,10 +2,29 @@
 
 BOB 취약점 트랙에 들어가면 하루? 숙제로 준다는 pwnable.kr이다.
 
-## Status
+말도안돼
 
-2018.05.29 기준
+## 문제
 
-![현 상태](screenshot/status.PNG)
-
-Rookiss까진 풀어봐야 되지 않을까?
+- Toddler's Bottle
+  - [fd](fd.md) : 파일 디스크립터
+  - [collision](collision.md) : 포인터
+  - [bof](bof.md) : 버퍼 오버플로우
+  - [flag](flag.md) : 바이너리 패킹
+  - [passcode](passcode.md) : GOT Overwrite
+  - [random](random.md) : rand 사용의 부적절한 예?
+  - [input](input.md)
+  - [leg](leg.md) : Fetch-Decode-Execute
+  - [mistake](mistake.md) : 연산자 우선순위
+  - [shellshock](shellshock.md) : 문제 이름 그대로
+  - [coin1](coin1.md) : 코딩코딩
+  - [blackjack](blackjack.md) : 뭔가 이상한 코드
+  - [lotto](lotto.md) : 숫자 검증하는 로직을 잘보자
+  - [cmd1](cmd1.md) : 환경변수
+  - [cmd2](cmd2.md) : 쉘을 잘 써먹자
+  - [uaf](uaf.md) : Use-After-Free
+  - [memcpy]()
+  - [asm](asm.md)
+  - [unlink]()
+  - [blukat](blukat.md) : 권한설정
+  - [horcruxes]()
