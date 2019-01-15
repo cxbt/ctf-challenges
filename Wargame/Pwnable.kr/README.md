@@ -4,6 +4,12 @@ BOB 취약점 트랙에 들어가면 하루? 숙제로 준다는 pwnable.kr이�
 
 말도안돼
 
+참고로 사이트에 있는 그림은 [Ragnarok M: Eternal Love](https://www.ragnaroketernallove.com/)라는 게임에서 나온 카드 그림이다. 
+
+(~~개인적으로 너구리가 귀여운것 같다~~)
+
+![nuguri](screenshot/card_20001.jpg)
+
 ## 문제
 
 - Toddler's Bottle
