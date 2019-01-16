@@ -19,7 +19,7 @@ BOB 취약점 트랙에 들어가면 하루? 숙제로 준다는 pwnable.kr이�
   - [flag](flag.md) : 바이너리 패킹
   - [passcode](passcode.md) : GOT Overwrite
   - [random](random.md) : rand 사용의 부적절한 예?
-  - [input](input.md)
+  - [input](input.md) : 여러가지 입출력 코딩
   - [leg](leg.md) : Fetch-Decode-Execute
   - [mistake](mistake.md) : 연산자 우선순위
   - [shellshock](shellshock.md) : 문제 이름 그대로
