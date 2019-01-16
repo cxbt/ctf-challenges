@@ -30,7 +30,9 @@ BOB 취약점 트랙에 들어가면 하루? 숙제로 준다는 pwnable.kr이�
   - [cmd2](cmd2.md) : 쉘을 잘 써먹자
   - [uaf](uaf.md) : Use-After-Free
   - [memcpy]()
-  - [asm](asm.md)
+  - [asm](asm.md) : 64비트 쉘코드 짜기
   - [unlink]()
   - [blukat](blukat.md) : 권한설정
   - [horcruxes]()
+- Rookiss
+  - [simple login]()
