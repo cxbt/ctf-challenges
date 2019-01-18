@@ -33,6 +33,6 @@ BOB 취약점 트랙에 들어가면 하루? 숙제로 준다는 pwnable.kr이�
   - [asm](asm.md) : 64비트 쉘코드 짜기
   - [unlink](unlink.md) : Heap 오버플로우, Unlink 매크로를 활용한 익스플로잇
   - [blukat](blukat.md) : 권한설정
-  - [horcruxes]()
+  - [horcruxes](horcruxes.md) : 간단한 ROP
 - Rookiss
   - [simple login](simple_login.md) : EBP, ESP, EIP 컨트롤
