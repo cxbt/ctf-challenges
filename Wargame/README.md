@@ -23,3 +23,5 @@
 - [exploit-exercises](https://github.com/cxbt/Writeup/tree/master/Wargame/Exploit-Execise/Nebula), Link : https://exploit-exercises.com
 
 - :heart: [XSS Thousand Knocks](XTK), Link : [http://xcz.kr/](https://knock.xss.moe)
+
+- :heart: [wargame.kr](https://github.com/cxbt/Writeup/tree/master/Wargame/Wargame.kr), Link : http://wargame.kr
